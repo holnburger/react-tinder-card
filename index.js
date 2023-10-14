@@ -20,7 +20,7 @@ const physics = {
   },
   animateBack: {
     friction: 10,
-    tension: 200
+    tension: 2000
   }
 }
 
