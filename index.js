@@ -19,7 +19,8 @@ const physics = {
     tension: 400
   },
   animateBack: {
-    friction: 10,
+    mass:10,
+    friction: 50,
     tension: 2000
   }
 }
@@ -55,6 +56,7 @@ const animateOut = async (gesture, setSpringTarget, windowHeight, windowWidth) =
 }
 
 const animateBack = (setSpringTarget) => {
+  console.log("animating back")
   // translate back to the initial position
   return new Promise((resolve) => {
     setSpringTarget.start({ xyrot: [0, 0, 0], config: physics.animateBack, onRest: resolve })
